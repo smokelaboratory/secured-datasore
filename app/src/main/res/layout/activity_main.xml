@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="40dp"
+        tools:context=".MainActivity">
+
+        <EditText
+            android:id="@+id/et_data"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/et_data"
+            app:layout_constraintStart_toStartOf="@id/et_data"
+            app:layout_constraintTop_toBottomOf="@+id/et_data" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_store_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:onClick="@{click::onClick}"
+            android:text="@string/store_data"
+            app:layout_constraintEnd_toStartOf="@id/bt_fetch_data"
+            app:layout_constraintStart_toStartOf="@+id/et_data"
+            app:layout_constraintTop_toBottomOf="@+id/tv_data" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_fetch_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{click::onClick}"
+            android:text="@string/fetch_data"
+            app:layout_constraintBottom_toBottomOf="@id/bt_store_data"
+            app:layout_constraintEnd_toEndOf="@+id/et_data"
+            app:layout_constraintStart_toEndOf="@id/bt_store_data"
+            app:layout_constraintTop_toTopOf="@id/bt_store_data" />
+
+        <EditText
+            android:id="@+id/et_secured_data"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            app:layout_constraintEnd_toEndOf="@+id/et_data"
+            app:layout_constraintStart_toStartOf="@+id/et_data"
+            app:layout_constraintTop_toBottomOf="@+id/bt_store_data" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_secured_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/et_data"
+            app:layout_constraintStart_toStartOf="@id/et_data"
+            app:layout_constraintTop_toBottomOf="@+id/et_secured_data" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_store_secured_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:onClick="@{click::onClick}"
+            android:text="@string/store_secure_data"
+            app:layout_constraintEnd_toStartOf="@id/bt_fetch_secured_data"
+            app:layout_constraintStart_toStartOf="@+id/et_data"
+            app:layout_constraintTop_toBottomOf="@+id/tv_secured_data" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_fetch_secured_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{click::onClick}"
+            android:text="@string/fetched_secured_data"
+            app:layout_constraintBottom_toBottomOf="@id/bt_store_secured_data"
+            app:layout_constraintEnd_toEndOf="@+id/et_data"
+            app:layout_constraintStart_toEndOf="@id/bt_store_secured_data"
+            app:layout_constraintTop_toTopOf="@id/bt_store_secured_data" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

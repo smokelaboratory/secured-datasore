@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SecuredDataStore</string>
+    <string name="store_secure_data">Store secure</string>
+    <string name="fetched_secured_data">Fetch secured</string>
+    <string name="store_data">Store</string>
+    <string name="fetch_data">Fetch</string>
+</resources>
